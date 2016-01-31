@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>简单图像工具</title>
+	<link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+	<div id="container">
+
+	<!-- 侧边栏 -->
+		<div id="sideBar">
+			<div id="uploading">
+				<a href="###">打开图片<input id='imgUpload' type="file" value="打开图片"  accept="image/png,image/jpeg,image/gif" /></a><a id="saveImg" href="###">保存</a>
+			</div>
+			<div id="filteringEffect">
+				<h3>滤镜</h3>
+				<ul id="filterBtn"></ul>
+			</div>
+			<div id="tools">
+				<h3>工具</h3>
+				<a href="###" id="colorContainer"><input id='color' type="color" ></a>
+				<input id='colorNumber' type='text' value="#000000">
+				<ul id="toolsBtn"></ul>
+				<span>画笔大小</span>
+				<input type="number"  id="strokeSizeNumber" value="5" >
+				<input type="range" id="strokeSize" value='5' min='1' max='100' step='1'>
+				<ul id="adjustBtns">
+				</ul>
+			</div>
+			<div id='histogramCont'>
+				<h3>直方图</h3>
+				<canvas id="histogram"></canvas>
+			</div>
+			<div id="history">
+				<button id="recallTo"></button><button id="repeatTo"></button>
+			</div>
+		</div>
+
+	<!-- 图像 -->
+		<div id="main">
+			<p id='message'>请打开一张图片</p>
+			<p id="message2">( 请使用<a href="http://www.firefox.com.cn/download/" target="_brank">firefox</a>或者<a href="http://www.google.cn/chrome/browser/desktop/index.html" target="_brank" >chrome</a>运行本页面 )</p>
+			<img src="###"  id="srcImg" style="display:none">
+
+			<canvas id="mycanvas" >
+				你的浏览器不支持canvas，请升级你的浏览器
+				<br>
+				<a href="http://www.google.cn/chrome/browser/desktop/index.html" target="_brank">点击下载chrome</a>
+				<br>
+				<a href="http://www.firefox.com.cn/download/" target="_brank">点击下载firefox</a>
+			</canvas>
+		</div>
+
+		<div id="scale">
+		<input type="range" id="scale-range" min="-5.0" max="5.0" step="0.1" defaultValue="0" />
+		</div>		
+
+	</div>
+	<div>
+		<div id="optionPop">
+			<div id="filterOptions"></div>
+			<div class="popctr">
+				<span id="cancelPop">取消</span>
+				<span id="submitPop">确定</span>
+			</div>
+		</div>
+		<div id="optionPopbg"></div>
+	</div>
+	<script src="scripts/support.js"></script>
+	<script src="scripts/effect.js"></script>
+	<script src="scripts/main.js"></script>
+	<div class="footer"><p>2015年11月 版本0.131 By <a href="http://weibo.com/weixiangzhe" target="_brank">矮子高</a>  </p></div>
+</body>
+</html>
